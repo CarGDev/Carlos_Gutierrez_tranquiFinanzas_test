@@ -3,14 +3,7 @@ import random from '../../utils/random'
 import MyMocks from './divPeople';
 import './people.css';
 import { API } from '../../utils/config'
-
-const Votes = (props: any) => {
-  console.log(props.value)
-  let sum: number = 0
-  props.value.map(x => sum += x.votes)
-  const text: string = `Total de votos = ${sum}`
-  return <h1>{text}</h1>
-}
+import Votes from './votes'
 
 const Names = () => {
   const [mocks, setMocks] = useState([]);

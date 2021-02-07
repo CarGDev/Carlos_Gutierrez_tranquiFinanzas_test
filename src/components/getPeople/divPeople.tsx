@@ -23,9 +23,6 @@ const MyMocks = (props: any) => {
   const names: any = name.split(' ')
   const firstName: string = (names[0] !== undefined) ? names[0] : '' 
   const lastName: string = (names[1] !== undefined) ? names[1] : 'Desconocido' 
-  // const minAge: number = 18
-  // const age: number = random(minAge, 70)
-  // const votes: number = random(1, 20)
 
   const place: string = `Place = ${id}`
   const first: string = `Name = ${firstName}`
