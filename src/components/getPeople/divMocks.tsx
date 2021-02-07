@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
 import random from '../../utils/random'
 import MyMocks from './divPeople';
-import './people.css';
+
+import '../../assets/people.css';
+
 import { API } from '../../utils/config'
 import Votes from './votes'
 
@@ -27,12 +30,13 @@ const Names = () => {
 
   return (
     <div className="mocks">
-      <div>
+      <div className='mocksMain'>
         <h1 className="myMocks">Votes</h1>
         <button>Order</button>
         <button>Desorder</button>
         <button>Per Votes</button>
         <Votes value={mocks} />
+        <Link to='/' className='mocksLink'>Main Page</Link>
       </div>
       <div className='mocks-people'>
         {mocks.map((mock, index) => (
