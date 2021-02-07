@@ -10,7 +10,7 @@ const App: FC = () => {
     <BrowserRouter>
       <Layout>
         <Switch>
-          <Route exact path='/lista-de-votaciones' component={Names} />
+          <Route exact path='/lista-de-votaciones/' component={Names} />
         </Switch>
       </Layout>
     </BrowserRouter>

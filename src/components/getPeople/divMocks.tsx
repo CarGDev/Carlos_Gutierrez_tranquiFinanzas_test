@@ -4,6 +4,14 @@ import MyMocks from './divPeople';
 import './people.css';
 import { API } from '../../utils/config'
 
+const Votes = (props: any) => {
+  console.log(props.value)
+  let sum: number = 0
+  props.value.map(x => sum += x.votes)
+  const text: string = `Total de votos = ${sum}`
+  return <h1>{text}</h1>
+}
+
 const Names = () => {
   const [mocks, setMocks] = useState([]);
 
@@ -14,7 +22,10 @@ const Names = () => {
         .then(res => {
           console.log(res)
           const { results } = res;
-          console.log('Mocks', results);
+          results.map((res: { votes: number; age: number; }, index: any) => {
+            res.votes = random(1 ,20)
+            res.age = random(18, 70)
+          })
           setMocks(results);
         });
     };
@@ -23,8 +34,15 @@ const Names = () => {
 
   return (
     <div className="mocks">
-      <h1 className="myMocks">Votes</h1>
+      <div>
+        <h1 className="myMocks">Votes</h1>
+        <button>Order</button>
+        <button>Desorder</button>
+        <button>Per Votes</button>
+        <Votes value={mocks} />
+      </div>
       <div className='mocks-people'>
+
         {mocks.map((mock, index) => (
           <MyMocks key={index} {...mock} />
         ))}
