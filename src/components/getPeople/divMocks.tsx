@@ -35,7 +35,6 @@ const Names = () => {
         <Votes value={mocks} />
       </div>
       <div className='mocks-people'>
-
         {mocks.map((mock, index) => (
           <MyMocks key={index} {...mock} />
         ))}
