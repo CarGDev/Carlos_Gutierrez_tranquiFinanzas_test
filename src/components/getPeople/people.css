@@ -1,0 +1,69 @@
+.mocks {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myMocks {
+  margin: 0;
+  background-color: #d2d2d2;
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mocks-people {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.people {
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  background-color: #d2d2d2;
+  padding: 5px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.peopleImg {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+
+.contentPeople {
+  margin: 15px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.peopleId,
+.peopleLName,
+.peopleAge,
+.peopleSlogan,
+.peopleVotes,
+.peopleName {
+  width: 200px;
+  justify-self: center;
+  text-align: left;
+  padding: 5px;
+}
+
