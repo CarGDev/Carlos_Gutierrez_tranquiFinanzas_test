@@ -9,7 +9,7 @@ const Header = () => {
       <Link to='/lista-de-votaciones' className='votesLink'>
         <div className='link'>Go For votations</div>
       </Link>
-      <Link to='/' className='votesLink'>
+      <Link to='/focusable-input' className='votesLink'>
         <div className='link'>Go For Enters</div>
       </Link>
     </div>
