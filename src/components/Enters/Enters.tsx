@@ -1,18 +1,24 @@
-import React from 'react';
-import { TextInput  } from 'react-native';
+import React, { FC, useState } from 'react';
+// import Focus from './focused'
 
-const Enters = () => {
-    const [value, onChangeText] = React.useState('Useless Placeholder');
+const Enters: FC = () => {
+  const [name, setValue] = useState<string>('');
+
+  function handleChange(event:any) {
+    setValue(event.target.value)
+  };
 
   return (
-        <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1  }}
-          onChangeText={text => onChangeText(text)}
-          value={value}
-        />
-      
+    <>
+      <input value={name} onChange={handleChange} />
+      <p>{name}</p>
+    </>
   );
   
 }
+
+{/* <Focus />, document.getElementById('focus')
+<div id="focus"></div> */}
+//ReactDOM.render(<Focus />, document.getElementById('focus'));
 
 export default Enters;
